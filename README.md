@@ -17,16 +17,39 @@ Usage of Health Fitness Data Printer:
   fitness [options]
 
 Options:
-  -c                   Use compact display mode
-  -desc                Sort in descending order
-  -f string            Filter type (name, distance, duration, energy)
-  -i string            Include only specific fields (comma-separated)
-  -n int               Maximum number of items to display (0 for all)
-  -sort string         Sort by field (name, date, duration, distance, energy)
-  -time-format string  Time format string (default "2006-01-02 15:04:05")
-  -type string         Data type to display (workouts or metrics) (default "workouts")
-  -v string            Filter value
-  -x string            Exclude specific fields (comma-separated)
+  -c    Use compact display mode
+  -desc
+        Sort in descending order
+  -distance-per-week
+        Show total distance per week
+  -distance-per-workout
+        Show distance per workout
+  -energy-per-week
+        Show total energy burned per week
+  -f string
+        Filter type (name, distance, duration, energy)
+  -i string
+        Include only specific fields (comma-separated)
+  -n int
+        Maximum number of items to display (0 for all)
+  -sort string
+        Sort by field (name, date, duration, distance, energy)
+  -time-format string
+        Time format string (default "2006-01-02 15:04:05 -0700")
+  -type string
+        Data type to display (workouts or metrics) (default "workouts")
+  -value string
+        Filter value
+  -workouts-per-month
+        Show total workouts per month
+  -x string
+        Exclude specific fields (comma-separated)
+
+Examples:
+  fitness -n 10 -c                    # Show 10 items in compact mode
+  fitness -f name -v "Pool Swim"      # Show only Pool Swim workouts
+  fitness -sort duration -desc        # Sort by duration descending
+  fitness -i "name,duration,distance" # Show only specific fields
 ```
 
 ## Examples
